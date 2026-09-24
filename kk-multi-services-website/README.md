@@ -2,6 +2,7 @@
 
 Static, responsive one-page website for **KK Multi Services** (Balewadi, Pune), built from the brand brochure 
 
+
 ## Stack
 - HTML5 (semantic landmarks, schema.org `LocalBusiness` JSON-LD, Open Graph)
 - Bootstrap 5.3 (grid, off-canvas mobile menu, floating-label forms, scrollspy)
