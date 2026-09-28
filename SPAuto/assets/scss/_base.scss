@@ -1,0 +1,113 @@
+@use "tokens" as *;
+@use "mixins" as *;
+
+:root {
+  --sp-navy: #{$sp-navy};
+  --sp-blue: #{$sp-blue};
+  --sp-sky: #{$sp-sky};
+  --sp-red: #{$sp-red};
+  --sp-nav-h: #{$nav-h};
+  --bs-primary: #{$sp-blue};
+  --bs-primary-rgb: 21, 96, 189;
+  --bs-body-font-family: #{$font-body};
+  --bs-body-color: #{$sp-body};
+  --bs-link-color: #{$sp-blue};
+  --bs-link-hover-color: #{$sp-navy};
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: $nav-h-shrunk + 16px;
+  overflow-x: clip; // off-screen offcanvas must not widen the page
+}
+
+body {
+  font-family: $font-body;
+  color: $sp-body;
+  background: $sp-surface;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+
+  @include down(lg) {
+    padding-bottom: $mobile-bar-h;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-display;
+  color: $sp-ink;
+  font-weight: 700;
+  letter-spacing: -.01em;
+}
+
+::selection {
+  background: rgba($sp-sky, .3);
+  color: $sp-ink;
+}
+
+a {
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+:focus-visible {
+  outline: 3px solid $sp-sky;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -100px;
+  z-index: 2000;
+  padding: .6rem 1rem;
+  border-radius: $radius-sm;
+  background: $sp-navy;
+  color: #fff;
+  font-weight: 600;
+
+  &:focus { top: 1rem; color: #fff; }
+}
+
+.section {
+  padding-block: clamp(4rem, 3rem + 4vw, 7rem);
+  position: relative;
+}
+
+.section-alt { background: $sp-bg; }
+
+.section-head {
+  max-width: 720px;
+  margin-bottom: clamp(2rem, 1.5rem + 2vw, 3.5rem);
+
+  &.text-center { margin-inline: auto; }
+
+  .eyebrow { @include eyebrow; margin-bottom: .75rem; }
+
+  h2 {
+    font-size: $fs-h2;
+    margin-bottom: .75rem;
+  }
+
+  p {
+    font-size: $fs-lg;
+    color: $sp-muted;
+    margin: 0;
+  }
+
+  &.text-center .eyebrow::after {
+    content: "";
+    width: 1.6rem;
+    height: 2px;
+    border-radius: 2px;
+    background: currentColor;
+  }
+}
+
+.text-gradient {
+  background: $sp-grad-wave;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
