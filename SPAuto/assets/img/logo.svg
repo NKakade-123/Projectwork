@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="S. P. Enterprises">
+  <rect x="3" y="3" width="114" height="114" rx="14" fill="#fff" stroke="#1560BD" stroke-width="6"/>
+  <text x="60" y="70" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-style="italic" font-weight="700" font-size="60" fill="#0E2F66" letter-spacing="-6">SP</text>
+  <text x="60" y="92" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-weight="700" font-size="15.5" fill="#0B1B33">Enterprises</text>
+  <rect x="16" y="98" width="88" height="2.4" fill="#0B1B33"/>
+  <rect x="16" y="102.5" width="88" height="1.2" fill="#0B1B33"/>
+</svg>

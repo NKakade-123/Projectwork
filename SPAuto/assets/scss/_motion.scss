@@ -1,0 +1,23 @@
+// Respect the visitor's reduced-motion preference: no smooth scrolling,
+// no looping animations, reveal content immediately.
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+    transition-delay: 0s !important;
+  }
+
+  [data-reveal] {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .marquee-track { animation: none !important; flex-wrap: wrap; justify-content: center; width: auto; }
+  .marquee { mask-image: none; }
+  .marquee .is-duplicate { display: none; }
+}
